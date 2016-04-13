@@ -142,7 +142,6 @@ The following modules are available in the container and can be loaded at runtim
 - `mod_erlang_event`: Module to send/receive events/commands in Erlang's binary format.
 - `mod_event_multicast`: Broadcasts events to netmask.
 - `mod_event socket`: Sends events via a single socket.
-- `mod_event_zmq`: http://www.zeromq.org/
 - `mod_json_cdr`: JSON CDR Module to files or curl
 - `mod_radius_cdr`: RADIUS CDR Module.
 - `mod_rayo`: 3PCC over XMPP - http://rayo.org/xep
