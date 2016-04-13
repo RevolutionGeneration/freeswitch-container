@@ -139,7 +139,6 @@ The following modules are available in the container and can be loaded at runtim
 - `mod_event_multicast`: Broadcasts events to netmask.
 - `mod_event socket`: Sends events via a single socket.
 - `mod_json_cdr`: JSON CDR Module to files or curl
-- `mod_radius_cdr`: RADIUS CDR Module.
 - `mod_rayo`: 3PCC over XMPP - http://rayo.org/xep
 - `mod_snmp`: SNMP AgentX module
 - `mod_xml_cdr` - XML-based call detail record handler.
@@ -160,7 +159,6 @@ The following modules are available in the container and can be loaded at runtim
 
 - `mod_lua` - Lua support.
 - `mod_perl` - Perl support.
-- `mod_python` - Python Support.
 - `mod_v8` - Google V8 JavaScript (ECMAScript) engine.
 
 ### Loggers
