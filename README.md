@@ -66,7 +66,6 @@ The following modules are available in the container and can be loaded at runtim
 - `mod_mp4`: MP4 File Format support for video apps.
 - `mod_nibblebill`: Billing module ("nibbles" at credit/cash amounts during calls)
 - `mod_oreka`: Module for Media Recording with Oreka
-- `mod_rad_auth`: use RADIUS for authentication
 - `mod_redis`: supplies a limit back-end that uses Redis.
 - `mod_rss`: Reads RSS feeds via a TTS engine.
 - `mod_sms`: Apps for chat messages
