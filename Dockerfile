@@ -45,9 +45,8 @@ ADD build/modules.conf /usr/src/freeswitch/modules.conf
 RUN ./configure --enable-core-pgsql-support
 RUN make
 RUN make install
-RUN make uhd-sounds-install
-RUN make uhd-moh-install
-RUN make samples
+RUN make sounds-install
+RUN make moh-install
 
 # Post install configuration.
 ADD sysv/init /etc/init.d/freeswitch
