@@ -40,7 +40,6 @@ The following modules are available in the container and can be loaded at runtim
 - `mod_avmd`: Detects voicemail beeps using a generalized approach.
 - `mod_blacklist`: Blacklist module.
 - `mod_callcenter`: Call queuing application that can be used for call center needs.
-- `mod_cidlookup`: Provides a means (database, url) to lookup the callerid name from a number.
 - `mod_commands`: A mass plethora of API interface commands.
 - `mod_conference`: Conference room module.
 - `mod_curl`: Allows scripts to make HTTP requests as receive responses as plain text or JSON.
@@ -94,7 +93,6 @@ The following modules are available in the container and can be loaded at runtim
 - `mod_amr`: GSM-AMR (Adaptive Multi-Rate) codec.
 - `mod_amrwb`: GSM-AMRWB (ARM Wide Band) codec.
 - `mod_bv`: BroadVoice16 and BroadVoice32 audio codecs (Broadcom codecs).
-- `mod_celt`: CELT ultra-low delay audio codec.
 - `mod_codec2`: FreeSWITCH CODEC2 Module.
 - 'mod_dahdi_codec' - DAHDI Codecs (G729A 8.0kbit, G723.1 5.3kbit).
 - `mod_g723_1`: G.723.1 codec.
