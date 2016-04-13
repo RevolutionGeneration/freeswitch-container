@@ -86,7 +86,6 @@ The following modules are available in the container and can be loaded at runtim
 
 ### Speech Recognition / Text-to-Speech
 - `mod_flite` - Free open source Text to Speech.
-- `mod_pocketsphinx` - Free open source Speech Recognition.
 - `mod_tts_commandline` - Run a command line and play the outputted file.
 - `mod_unimrcp` - Module for an open MRCP implementation
 
