@@ -159,7 +159,6 @@ The following modules are available in the container and can be loaded at runtim
 
 - `mod_lua` - Lua support.
 - `mod_perl` - Perl support.
-- `mod_v8` - Google V8 JavaScript (ECMAScript) engine.
 
 ### Loggers
 
@@ -190,6 +189,5 @@ The following modules are available in the container and can be loaded at runtim
 
 - `mod_xml_curl` - XML Gateway Code. Configure FreeSWITCH™ from a web server on boot and on the fly.
 - `mod_xml_ldap` - LDAP XML Gateway.
-- `mod_xml_radius` - RADIUS authentication gateway.
 - `mod_xml_rpc` - XML Remote Procedure Calls. Issue commands from your web application.
 - `mod_xml_scgi` - Simple Common Gateway Interface.
