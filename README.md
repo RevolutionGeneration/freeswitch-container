@@ -59,6 +59,7 @@ The following modules are available in the container and can be loaded at runtim
 - `mod_hash`: Hashtable key/value store functionality and limit backend
 - `mod_httapi`: HT-TAPI Hypertext Telephony API (Twilio FreeSWITCH style)
 - `mod_http_cache`: HTTP GET with caching.
+- `mod_kazoo` : https://github.com/2600hz/kazoo/
 - `mod_ladspa`: use Auto-tune on your call.
 - `mod_lcr`: Implements LCR (Least Cost Routing)
 - `mod_memcache`: API that integrates with memcached (a distributed key/value object store)
