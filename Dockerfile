@@ -25,9 +25,9 @@ RUN ./install-deps.sh
 RUN rm install-deps.sh
 
 # Configure Fail2ban
-ADD conf/freeswitch.conf /etc/fail2ban/filter.d/freeswitch.conf
-ADD conf/freeswitch-dos.conf /etc/fail2ban/filter.d/freeswitch-dos.conf
-ADD conf/jail.local /etc/fail2ban/jail.local
+ADD conf/fail2ban/freeswitch.conf /etc/fail2ban/filter.d/freeswitch.conf
+ADD conf/fail2ban/freeswitch-dos.conf /etc/fail2ban/filter.d/freeswitch-dos.conf
+ADD conf/fail2ban/jail.local /etc/fail2ban/jail.local
 
 # Download FreeSWITCH.
 WORKDIR /usr/src
@@ -45,8 +45,11 @@ ADD build/modules.conf /usr/src/freeswitch/modules.conf
 RUN ./configure --enable-core-pgsql-support
 RUN make
 RUN make install
-RUN make sounds-install
-RUN make moh-install
+RUN make cd-sounds-install
+RUN make cd-moh-install
+
+# Configure Freeswitch
+COPY conf/freeswitch/ /etc/freeswitch/
 
 # Post install configuration.
 ADD sysv/init /etc/init.d/freeswitch
