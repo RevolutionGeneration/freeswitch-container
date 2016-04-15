@@ -3,8 +3,8 @@
     <settings>
         <param name="listen-ip" value="0.0.0.0" />
         <param name="listen-port" value="8031" />
-        <!--<param name="cookie-file" value="/etc/freeswitch/autoload_configs/.erlang.cookie" />-->
-        <param name="cookie" value="change_me" />-->
+        <param name="cookie-file" value="/etc/freeswitch/.erlang.cookie" />
+        <!--<param name="cookie" value="change_me" />-->
         <param name="shortname" value="false" />
         <param name="nodename" value="freeswitch" />
         <!--<param name="kazoo-var-prefix" value="ecallmgr" />-->

@@ -66,7 +66,8 @@ RUN touch /usr/local/freeswitch/log/freeswitch.log
 RUN chown freeswitch:daemon /usr/local/freeswitch/log/freeswitch.log
 
 # Open the container up to the world.
-EXPOSE 11000/tcp 11000/udp
+EXPOSE 11000 #sip port (to be used with kamailio)
+EXPOSE 8021 #event_socket port
 
 # Start the container.
 CMD service snmpd start && service freeswitch start && tail -f /usr/local/freeswitch/log/freeswitch.log
