@@ -62,14 +62,28 @@ RUN adduser --gecos "FreeSWITCH Voice Platform" --no-create-home --disabled-logi
 RUN chown -R freeswitch:daemon /usr/local/freeswitch
 
 # Create the log file.
-RUN touch /usr/local/freeswitch/log/freeswitch.log
-RUN chown freeswitch:daemon /usr/local/freeswitch/log/freeswitch.log
+RUN mkdir /var/log/freeswitch/
+RUN touch /var/log/freeswitch/freeswitch.log
+RUN rm -rf /usr/local/freeswitch/log
+RUN ln -s /var/log/freeswitch/ /usr/local/freeswitch/log
+RUN chown -R freeswitch:daemon /var/log/freeswitch
+
+# Link config files
+RUN rm -rf /usr/local/freeswitch/conf
+RUN ln -s /etc/freeswitch/ /usr/local/freeswitch/conf
+RUN chown -R freeswitch:daemon /etc/freeswitch/
+
+# Update bin path
+ENV PATH=$PATH:/usr/local/freeswitch/bin/
 
 # Open the container up to the world.
 # sip port (to be used with kamailio)
 EXPOSE 11000
 # event_socket port
 EXPOSE 8021
+# kazoo port
+EXPOSE 8031
+EXPOSE 4369
 
 # Start the container.
-CMD service snmpd start && service freeswitch start && tail -f /usr/local/freeswitch/log/freeswitch.log
+CMD service snmpd start && epmd -daemon && service freeswitch start && tail -f /var/log/freeswitch/freeswitch.log
