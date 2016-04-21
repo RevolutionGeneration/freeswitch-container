@@ -67,11 +67,13 @@ RUN touch /var/log/freeswitch/freeswitch.log
 RUN rm -rf /usr/local/freeswitch/log
 RUN ln -s /var/log/freeswitch/ /usr/local/freeswitch/log
 RUN chown -R freeswitch:daemon /var/log/freeswitch
+RUN chown -R freeswitch:daemon /usr/local/freeswitch
 
 # Link config files
 RUN rm -rf /usr/local/freeswitch/conf
 RUN ln -s /etc/freeswitch/ /usr/local/freeswitch/conf
 RUN chown -R freeswitch:daemon /etc/freeswitch/
+RUN chown -R freeswitch:daemon /usr/local/freeswitch
 
 # Update bin path
 ENV PATH=$PATH:/usr/local/freeswitch/bin/
